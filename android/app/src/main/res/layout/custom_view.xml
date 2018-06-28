@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.awesomeproject.customview.CustomView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minHeight="150dp"
+    android:background="#FD5C08"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="fill_parent"
+        android:layout_height="23dp"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:text="0012345678"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/button_send"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:text="Native Button calls RN Event"
+        android:layout_marginTop="50dp" />
+
+</com.awesomeproject.customview.CustomView >
