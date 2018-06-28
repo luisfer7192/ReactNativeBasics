@@ -1,5 +1,6 @@
 # ReactNativeBasics
 
+Basic example of Native Modules and Native UI Components.
 
 ![Android Preview](./img/android.png) ![iOS Preview](./img/ios.png)
 
@@ -278,7 +279,7 @@
 	  }
 	  
 	}
-```
+	```
 
 ### Android [docs](https://facebook.github.io/react-native/docs/native-modules-android)
 
