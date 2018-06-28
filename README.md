@@ -238,7 +238,6 @@ Basic example of Native Modules and Native UI Components.
 
 	```js
 	// MainView.js
-	
 	export default class MainView extends Component {
 	
 	  onMyEvent = (data: Object) => {
@@ -266,7 +265,6 @@ Basic example of Native Modules and Native UI Components.
 
 	```swift
 	// CustomManager.swift
-	
 	@objc (RCTCustomManager)
 	class RCTCustomManager: NSObject, RCTBridgeModule {
 	  
@@ -287,7 +285,6 @@ Basic example of Native Modules and Native UI Components.
 
 	```java
 	// CustomManager.java
-	
 	public class CustomManager extends ReactContextBaseJavaModule {
 	
 	    public CustomManager(ReactApplicationContext reactContext) {
@@ -314,7 +311,6 @@ Basic example of Native Modules and Native UI Components.
 
 	```java
 	// CustomViewReactPackage.java
-	
 	public class CustomViewReactPackage implements ReactPackage {
 	
 	    @Override
@@ -330,8 +326,8 @@ Basic example of Native Modules and Native UI Components.
 	and register it in your `MainApplication` file
 	
 	```java
-	@Override
 	// MainApplication.java
+	@Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
