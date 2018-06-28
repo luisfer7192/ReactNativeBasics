@@ -2,8 +2,7 @@
 
 Basic example of Native Modules and Native UI Components.
 
-<img src="./img/preview_android.gif" width="250">
-<img src="./img/preview_ios.gif" width="250">
+<img src="./img/preview_android.gif" style="float: left;" width="250"> <img src="./img/preview_ios.gif" style="float: left;" width="250">
 
 
 ## Native UI Components
