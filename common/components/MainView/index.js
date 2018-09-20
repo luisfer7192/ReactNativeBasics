@@ -6,7 +6,8 @@ import CustomManager from '../CustomView/manager.js';
 
 type Props = {};
 type State = {
-  cont: number
+  cont: number,
+  color: string
 };
 
 export default class MainView extends Component<Props, State> {
@@ -15,12 +16,19 @@ export default class MainView extends Component<Props, State> {
     super(props);
 
     this.state = {
-      cont: 0
+      cont: 0,
+      color: "#0090F8"
     };
   }
 
   onIncreaseValue = (data: Object) => {
-    this.setState({ cont: this.state.cont + 1 })
+    const cont = this.state.cont + 1;
+    if(cont % 10 === 0) {
+      const color = '#' + Math.random().toString(16).slice(2, 8).toUpperCase();
+      this.setState({ cont, color });
+    } else {
+      this.setState({ cont });
+    }
   }
 
   onButtonPressed = () => {
@@ -34,6 +42,7 @@ export default class MainView extends Component<Props, State> {
           style={{ flex: 1 }}
           message={"" + this.state.cont}
           onIncreaseValue={this.onIncreaseValue}
+          color={this.state.color}
         />
         <Button
           onPress={this.onButtonPressed}

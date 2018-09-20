@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import com.facebook.react.common.MapBuilder.Builder;
 
 import com.awesomeproject.MainActivity;
@@ -18,6 +19,7 @@ import java.util.Map;
 public class CustomViewManager extends SimpleViewManager<CustomView> {
 
     public static final String REACT_CLASS = "RCTCustomView";
+    private Button mButton;
 
     @Override
     public String getName() { return REACT_CLASS; }
@@ -32,6 +34,12 @@ public class CustomViewManager extends SimpleViewManager<CustomView> {
     @ReactProp(name = "message")
     public void setMessage(CustomView view, String message) {
         view.getMsgTextView().setText("Property from JS: " + message);
+    }
+    
+    @ReactProp(name = "color")
+    public void changeButtonColor(CustomView view, String color) {
+        mButton = (Button) view.findViewById(R.id.button_send);
+        mButton.setBackgroundColor(Color.parseColor(color));
     }
 
     public Map getExportedCustomBubblingEventTypeConstants() {
